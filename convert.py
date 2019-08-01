@@ -34,7 +34,7 @@ platform = utils.get_platform()
 
 VERSION = '0.2.1'
 PROMPT = '▶' if platform == 'linux' else '>'
-PYTHON = "python"    # command that you use to launch Python in the terminal
+PYTHON = "python3" if platform == 'linux' else 'python'   # command that you use to launch Python in the terminal
 
 class NotImplementedException(Exception):
     pass
