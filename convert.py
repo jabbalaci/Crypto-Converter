@@ -32,7 +32,7 @@ accepted_currencies_with_sat = accepted_currencies + ('sat',)    # satoshi inclu
 
 platform = utils.get_platform()
 
-VERSION = '0.2'
+VERSION = '0.2.1'
 PROMPT = '▶' if platform == 'linux' else '>'
 PYTHON = "python"    # command that you use to launch Python in the terminal
 
