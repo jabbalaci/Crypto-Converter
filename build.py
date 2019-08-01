@@ -62,7 +62,8 @@ def _clean_dist():
     remove_directory("dist")
 
 
-@task(_clean_dist)
+# @task(_clean_dist)
+@task()
 def exe():
     """
     create executable with PyInstaller
@@ -70,7 +71,8 @@ def exe():
     call_external_command("pyinstaller --onefile convert.py")
 
 
-@task(_clean_dist)
+# @task(_clean_dist)
+@task()
 def exe2():
     """
     create executable with PyInstaller (--noupx)

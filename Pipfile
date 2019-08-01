@@ -10,7 +10,7 @@ pyinstaller = "*"
 pypiwin32 = "*"
 
 [packages]
-requests = "*"
+urllib3 = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.6"

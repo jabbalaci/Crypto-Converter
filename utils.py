@@ -1,4 +1,6 @@
+import shlex
 import sys
+from subprocess import PIPE, STDOUT, Popen
 
 
 def get_platform():
@@ -12,3 +14,6 @@ def get_platform():
     return "else"
 
 
+def get_simple_cmd_output(cmd, stderr=STDOUT):
+    args = shlex.split(cmd)
+    return Popen(args, stdout=PIPE, stderr=stderr).communicate()[0].decode("utf8")
