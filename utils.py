@@ -3,7 +3,7 @@ import sys
 from subprocess import PIPE, STDOUT, Popen
 
 
-def get_platform():
+def get_platform() -> str:
     text = sys.platform
     if text.startswith("linux"):
         return "linux"
@@ -14,6 +14,6 @@ def get_platform():
     return "else"
 
 
-def get_simple_cmd_output(cmd, stderr=STDOUT):
+def get_simple_cmd_output(cmd: str, stderr=STDOUT) -> str:
     args = shlex.split(cmd)
     return Popen(args, stdout=PIPE, stderr=stderr).communicate()[0].decode("utf8")

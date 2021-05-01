@@ -14,8 +14,9 @@ https://github.com/jabbalaci
 """
 
 import os
+
 try:
-    import readline    # doesn't exist under Windows
+    import readline  # doesn't exist under Windows
 except:
     pass
 from pprint import pprint
@@ -24,15 +25,15 @@ from typing import Optional, Tuple, Union
 import utils
 from api import cmc, nova
 
-default_currencies = ('BTC', 'USD', 'EUR', 'HUF')
+default_currencies = ('BTC', 'BNB', 'USD', 'EUR', 'HUF')
 accepted_fiat = ('USD', 'EUR', 'HUF')
-crypto_currencies = ('BTC', 'QST')
+crypto_currencies = ('BTC', 'BNB', 'QST')
 accepted_currencies = tuple(default_currencies + crypto_currencies)
 accepted_currencies_with_sat = accepted_currencies + ('sat',)    # satoshi included
 
 platform = utils.get_platform()
 
-VERSION = '0.2.1'
+VERSION = '0.2.2'
 PROMPT = '▶' if platform == 'linux' else '>'
 PYTHON = "python3" if platform == 'linux' else 'python'   # command that you use to launch Python in the terminal
 
@@ -90,7 +91,7 @@ def my_convert(amount: float, from_currency: str, to_currency: str) -> Optional[
 
     d = cmc.convert(amount, from_currency, to_currency)
     if d:
-        price: float = d['data']['quote'][to_currency]['price']
+        price: float = d['data']['quote'][to_currency]['price']    # type: ignore
         return price
     # else:
     return None

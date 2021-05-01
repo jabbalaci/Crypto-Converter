@@ -100,23 +100,21 @@ export COINMARKETCAP_API="<your_coinmarketcap_api_key_here>"
 Creating the virtual environment
 --------------------------------
 
-I suggest using pipenv. Enter the project directory and issue the following command (supposing you already have pipenv):
-
-    $ pipenv install --dev
+I suggest using poetry.
 
 Launching the application
 -------------------------
 
 Activate the virt. env. and then launch the program:
 
-    $ pipenv shell
+    $ poetry shell
     $ ./convert.py
 
 Creating an executable
 ----------------------
 
-    $ pipenv shell
-    $ pynt exe
+    $ poetry shell
+    $ make exe
 
 The EXE will appear in the `dist/` folder. It will be a standalone exe that you can use anywhere (even on a machine that doesn't have Python at all), i.e. this exe is portable.
 

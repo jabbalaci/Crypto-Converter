@@ -7,19 +7,19 @@ https://novaexchange.com/remote/faq/
 """
 
 import json
+from typing import Dict
 
 import requests
-
 import utils
 
 URL = "https://novaexchange.com/remote/v2/"
 
 
-def api_query(method) -> dict:
+def api_query(method: str) -> Dict:
     if method.split('/')[0][0:6] == 'market':
         r = requests.get(URL + method + '/', timeout=60)
     #
-    return r.json()
+    return r.json()    # type: ignore
 
 
 def api_query_with_curl(method) -> dict:
