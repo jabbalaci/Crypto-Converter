@@ -6,7 +6,7 @@ authors = ["Jabba Laci <jabba.laci@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-requests = "^2.25.1"
+requests = "^2.31.0"
 
 [tool.poetry.dev-dependencies]
 mypy = "^0.812"
