@@ -97,27 +97,6 @@ Under Linux, for instance, add the following line to the end of your ``~/.bashrc
 export COINMARKETCAP_API="<your_coinmarketcap_api_key_here>"
 ```
 
-Creating the virtual environment
---------------------------------
-
-I suggest using poetry.
-
-Launching the application
--------------------------
-
-Activate the virt. env. and then launch the program:
-
-    $ poetry shell
-    $ ./convert.py
-
-Creating an executable
-----------------------
-
-    $ poetry shell
-    $ make exe
-
-The EXE will appear in the `dist/` folder. It will be a standalone exe that you can use anywhere (even on a machine that doesn't have Python at all), i.e. this exe is portable.
-
 Use it at your own risk
 -----------------------
 
